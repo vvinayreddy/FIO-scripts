@@ -1,7 +1,7 @@
 #!/bin/bash
 hn=`hostname`
-queueDepth=(2 4 6 8 16 32 64 128)
-numJobs=(2 4 6 8 16)
+queueDepth=( 2, 4, 6, 8, 16, 32, 64, 128)
+numJobs=( 2, 4, 6, 8, 16)
 for i in "${queueDepth[@]}"
 do
 for j in "${numJobs[@]}"
