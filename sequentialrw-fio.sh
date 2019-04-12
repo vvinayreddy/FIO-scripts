@@ -1,10 +1,10 @@
 #!/bin/bash
 hn=`hostname`
-# i = Queue depth
-# j = numjobs
-for i in 2 4 6 8 16 32 64 128
+queueDepth=(2 4 6 8 16 32 64 128)
+numJobs=(2 4 6 8 16)
+for i in $queueDepth
 do
-for j in 2 4 8 16
+for j in $numJobs
 do
 echo Running $i QD with $j JOBS with bs $1 and 100% Sequential Reads
 # test 4QD, 2 JOBS and 100 Random read 

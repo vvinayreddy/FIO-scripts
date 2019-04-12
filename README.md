@@ -9,7 +9,7 @@ Redhat/Centos,Amazon Linux,Ubuntu and FIO
 
 Description
 -----------
-This script will run FIO test on the storage device with different Queue Depth and differnet number of jobs for TPC-E, TPC-C and 100% random read/write worklaods. If you want to define Queue depth and number of jobs for your requirement replace the value for i and j where i is Queue depth and j is number of jobs. 
+This script will run FIO test on the storage device with different Queue Depth and differnet number of jobs for TPC-E, TPC-C and 100% random read/write worklaods. If you want to define Queue depth and number of jobs for your requirement replace the values in queueDepth and numJobs array.
 
 Script Variables
 --------------
