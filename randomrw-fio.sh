@@ -3,9 +3,9 @@ hn=`hostname`
 queueDepth=(2 4 6 8 16 32 64 128)
 numJobs=(2 4 6 8 16)
 fileNames=/dev/sdb:/dev/sdc
-for i in $queueDepth
+for i in "${queueDepth[@]}"
 do
-for j in $numJobs
+for j in "${numJobs[@]}"
 do
 echo Running $i QD with $j JOBS with bs $1 and 100RR
 # test 4QD, 2 JOBS and 100 Random read 
