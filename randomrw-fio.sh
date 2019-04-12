@@ -5,7 +5,7 @@ numJobs=( 2, 4, 6, 8, 16)
 fileNames=/dev/sdb:/dev/sdc
 if [ -z "$1" ]
 then
-echo "please enter the blockzise for the test"
+echo "please enter the blocksize for the test"
 elif [ -z "$2" ]
 then
 echo "please enter the runtime for the test"
