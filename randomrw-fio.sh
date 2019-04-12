@@ -3,9 +3,12 @@ hn=`hostname`
 queueDepth=( 2, 4, 6, 8, 16, 32, 64, 128)
 numJobs=( 2, 4, 6, 8, 16)
 fileNames=/dev/sdb:/dev/sdc
-if [ $# -eq 0 ]
+if [ -z "$1" ]
 then
-echo "please enter the blockzise" 
+echo "please enter the blockzise and runtime"
+elif [ -z "$2" ]
+then
+echo "please enter the runtime for the test"
 else
 for i in "${queueDepth[@]}"
 do
