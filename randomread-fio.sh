@@ -27,7 +27,7 @@ iostat -x 5 240 >> iostat_$1_70R30W_"$i"QD_"$j"Jobs_$hn.log &
 
 top -b -d 5 >> top_$1_70R30W_"$i"QD_"$j"Jobs_$hn.log &
 
-/usr/bin/fio --name=RandomReadTest --rw=randrw --rwmixwrite=30 --bs=$1 --invalidate=1 --direct=1 --filename=/dev/sdb:/dev/sdc  --group_reporting --time_based --runtime=$2 --ioengine=libaio --numjobs=$j --iodepth=$i --norandommap --randrepeat=0 --exitall --output-format=json --output=fiotest_$1_70R30W_"$i"QD_"$j"Jobs_$hn.json
+/usr/bin/fio --name=RandomReadWriteTest --rw=randrw --rwmixwrite=30 --bs=$1 --invalidate=1 --direct=1 --filename=/dev/sdb:/dev/sdc  --group_reporting --time_based --runtime=$2 --ioengine=libaio --numjobs=$j --iodepth=$i --norandommap --randrepeat=0 --exitall --output-format=json --output=fiotest_$1_70R30W_"$i"QD_"$j"Jobs_$hn.json
 pkill top 
 pkill sar
 pkill iostat
@@ -40,7 +40,7 @@ iostat -x 5 240 >> iostat_$1_90R10W_"$i"QD_"$j"Jobs_$hn.log &
 
 top -b -d 5 >> top_$1_90R10W_"$i"QD_"$j"Jobs_$hn.log &
 
-/usr/bin/fio --name=RandomReadTest --rw=randrw --rwmixwrite=10 --bs=$1 --invalidate=1 --direct=1 --filename=/dev/sdb:/dev/sdc  --group_reporting --time_based --runtime=$2 --ioengine=libaio --numjobs=$j --iodepth=$i --norandommap --randrepeat=0 --exitall --output-format=json --output=fiotest_$1_90R10W_"$i"QD_"$j"Jobs_$hn.json
+/usr/bin/fio --name=RandomReadWriteTest --rw=randrw --rwmixwrite=10 --bs=$1 --invalidate=1 --direct=1 --filename=/dev/sdb:/dev/sdc  --group_reporting --time_based --runtime=$2 --ioengine=libaio --numjobs=$j --iodepth=$i --norandommap --randrepeat=0 --exitall --output-format=json --output=fiotest_$1_90R10W_"$i"QD_"$j"Jobs_$hn.json
 pkill top 
 pkill sar
 pkill iostat
@@ -53,7 +53,7 @@ iostat -x 5 240 >> iostat_$1_100RW_"$i"QD_"$j"Jobs_$hn.log &
 
 top -b -d 5 >> top_$1_100RW_"$i"QD_"$j"Jobs_$hn.log &
 
-/usr/bin/fio --name=RandomReadTest --rw=randwrite --rwmixread=0 --bs=$1 --invalidate=1 --direct=1 --filename=/dev/sdb:/dev/sdc  --group_reporting --time_based --runtime=$2 --ioengine=libaio --numjobs=$j --iodepth=$i --norandommap --randrepeat=0 --exitall --output-format=json --output=fiotest_$1_100RW_"$i"QD_"$j"Jobs_$hn.json
+/usr/bin/fio --name=RandomWriteTest --rw=randwrite --rwmixread=0 --bs=$1 --invalidate=1 --direct=1 --filename=/dev/sdb:/dev/sdc  --group_reporting --time_based --runtime=$2 --ioengine=libaio --numjobs=$j --iodepth=$i --norandommap --randrepeat=0 --exitall --output-format=json --output=fiotest_$1_100RW_"$i"QD_"$j"Jobs_$hn.json
 pkill top 
 pkill sar
 pkill iostat
