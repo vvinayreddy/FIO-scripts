@@ -2,8 +2,6 @@
 Scripts to run FIO tests on storage devices
 ============
 
-Scripts to run FIO tests on storage devices
-
 Requirement
 -----------
 
